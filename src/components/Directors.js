@@ -8,8 +8,13 @@ function Directors() {
       {directors.map((person) => {
         return (
           <>
-            <li>{person.name}</li>
-            <ul>{person.movies}</ul>
+            <h4>Name:{person.name}</h4>
+            <p>
+              Movies:
+              {person.movies.map((item, index) => {
+                return <li key={index}>{item}</li>;
+              })}
+            </p>
           </>
         );
       })}

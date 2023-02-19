@@ -8,8 +8,13 @@ function Actors() {
       {actors.map((actor) => {
         return (
           <div>
-            <li>{actor.name}</li>
-            <ul>{actor.movies}</ul>
+            <h4>Name:{actor.name}</h4>
+            <p>
+              Movies:
+              {actor.movies.map((movie) => {
+                return <li>{movie}</li>;
+              })}
+            </p>
           </div>
         );
       })}

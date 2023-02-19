@@ -6,11 +6,17 @@ function Movies() {
     <div>
       <h1>Movies Page</h1>
       <div>
-        {movies.map((movieItem) => {
+        {movies.map((movieItem, index) => {
           return (
             <>
-              <ul>{movieItem.title}</ul>
-              <li>{movieItem.genres}</li>
+              <h4>Name: {movieItem.title}</h4>
+              <h5>Time: {movieItem.time} </h5>
+              <p>
+                Genres:
+                {movieItem.genres.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </p>
             </>
           );
         })}
